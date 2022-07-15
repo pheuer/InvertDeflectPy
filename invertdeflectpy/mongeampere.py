@@ -259,5 +259,5 @@ class InvertMA:
         dphi_dtMS=dphi_dtMS[:n_iter]
         dt=dt[:n_iter]
         
-        self.results = (self.I_rec, self.Fx, self.Fy, dphi_dtMS)
+        self.results = (self.I_rec, self.Fx, self.Fy, dphi_dtMS, dt)
         

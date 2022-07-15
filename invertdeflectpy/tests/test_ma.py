@@ -72,7 +72,7 @@ def test_2d():
     print(f"Execution time: {t1-t0:.1f} s")
     
     
-    I_rec, Fx, Fy, dtMS = obj.results
+    I_rec, Fx, Fy, dphi_dtMS, dt = obj.results
     
     ax = axarr[0][1]
     ax.set_aspect('equal')
@@ -91,13 +91,20 @@ def test_2d():
     
     fig, ax = plt.subplots()
     ax.set_xlabel("Iteration")
-    iterations = np.arange(len(dtMS))
-    ax.plot(iterations, dtMS, label='Energy')
+    iterations = np.arange(len(dphi_dtMS))
+    ax.plot(iterations, dphi_dtMS, label='dphi_dtMS')
     ax.axhline(obj.tolerance, label='Tolerance', color='black', linestyle='dashed')
-    ax.set_title("dt_MS")
+    ax.plot([], color='blue', label ='dt')
+    ax.set_ylabel("dphi_dtMS")
     ax.legend(loc='upper right')
+    
+    ax2 = ax.twinx()
+    ax2.plot(iterations, dt, label='dt', color='blue')
+    ax2.set_ylabel("dt")
+    
     
     
 if __name__ == '__main__':
     test_1d()
     test_2d()
+    
