@@ -68,7 +68,7 @@ def test_2d():
     t0 = time.time()
     
     obj = InvertPIC(I, N_cell_min=4, tolerance=1e-2, max_iter=60,
-                        plots=plots)
+                        plots=plots, verbose=True)
     obj.run()
     
     
@@ -111,7 +111,7 @@ def test_2d():
     
         
 if __name__ == "__main__":
-    test_1d()
+    #test_1d()
     test_2d()
     
 
