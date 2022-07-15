@@ -324,6 +324,8 @@ class InvertPIC:
         
         # Reconstructed I0 (remove ghost cells and undo normalization of initial n_e)
         self.I0_rec=self.n_e[1:-1, 1:-1]*np.mean(self.I0)
+        # Save a copy of n_e to normalize the resulting force with
+        self.n0 = np.copy(self.n_e)
         
         # Drag coefficient on the grid set to twice the plasma frequency when
         # n_e=n_i to give critical damping at desired final state
