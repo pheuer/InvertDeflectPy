@@ -2,7 +2,7 @@
 mongeampere.py 
 @author: Peter Heuer
 
-This Monge-Ampere solver is translated from an IDL program by Jonathan Davies
+This Monge-Ampere solver is translated from a matlab program by Jonathan Davies
 which itself is adapted from the PROBLEM code by Archie Bott:
 
 https://github.com/flash-center/PROBLEM
