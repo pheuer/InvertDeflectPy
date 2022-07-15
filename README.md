@@ -1,5 +1,5 @@
 # InvertDeflectPy
-An algorithm for inverting deflectometry data
+A collection of algorithms for inverting deflectometry data
 
 # Installation Instructions
 If you intend to use this package without changing the code, follow the instructions to install as a user. If you plan on making changes to the code, install in developer mode. 
