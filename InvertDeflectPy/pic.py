@@ -647,6 +647,8 @@ def test_1d():
     
 def test_2d(plots=True):
     
+    print(os.getcwd())
+    
     file = os.path.join('C:\\','Users','pvheu','Box','pheuer','Research',
                         'Experiments and Projects',
                         '2022 Testing PRad Algorithms',
