@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import os, h5py
 import numpy as np
 from scipy.interpolate import interpn
 from scipy.signal import convolve2d
 
-import time
 import matplotlib.pyplot as plt
 
 from numba import njit
