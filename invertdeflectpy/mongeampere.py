@@ -1,4 +1,21 @@
-# -*- coding: utf-8 -*-
+"""
+mongeampere.py 
+@author: Peter Heuer
+
+This Monge-Ampere solver is translated from an IDL program by Jonathan Davies
+which itself is adapted from the PROBLEM code by Archie Bott:
+
+https://github.com/flash-center/PROBLEM
+
+If you use this code, please cite the following papers 
+
+*TBA* J.R. Davies, P.V. Heuer, A.F.A. Bott
+
+A.F.A. Bott et al. Proton imaging of stochastic magnetic fields. Journal of
+Plasma Physics 83, (2017) https://doi.org/10.1017/S0022377817000939
+
+"""
+
 
 import numpy as np
 from scipy.interpolate import interpn, griddata

@@ -1,4 +1,13 @@
-# -*- coding: utf-8 -*-
+"""
+mongeampere.py 
+@author: Peter Heuer
+
+This solver is translated from a matlab program by Jonathan Davies
+
+If you use this code, please cite the following paper
+
+*TBA* J.R. Davies, P.V. Heuer, A.F.A. Bott
+"""
 
 import numpy as np
 from scipy.interpolate import interpn
