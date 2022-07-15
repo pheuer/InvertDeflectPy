@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 15 10:38:10 2022
-
-@author: pheu
-"""
-
 
 import numpy as np
 from scipy.interpolate import interpn, griddata
