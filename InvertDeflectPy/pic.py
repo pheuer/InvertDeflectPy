@@ -237,6 +237,8 @@ class InvertPIC:
         
         # Reconstructed I0 (remove ghost cells and undo normalization of initial n_e)
         self.I0_rec=self.n_e[1:-1]*np.mean(self.I0)
+        # Save a copy of n_e to normalize the resulting force with
+        self.n0 = np.copy(self.n_e)
         
         #Add ghost cells to n_i that maintain charge neutrality n_i=n_e
         self.n_i= np.pad(self.n_i, (1,1), mode='constant',
@@ -580,11 +582,11 @@ class InvertPIC:
             # Weight particle displacements from initial position z0 to the grid 
             # to determine F then remove ghost cells
             self.Fx = _weight_2d(self.x0, self.y0, self.wf*(self.x-self.x0), 
-                                 self.Nx, self.Ny)
+                                 self.Nx, self.Ny)/self.n0
             self.Fx = self.Fx[1:-1, 1:-1]
             
             self.Fy = _weight_2d(self.x0, self.y0, self.wf*(self.y-self.y0), 
-                                 self.Nx, self.Ny)
+                                 self.Nx, self.Ny)/self.n0
             self.Fy = self.Fy[1:-1, 1:-1]
             
             # Find reconstructed measured proton intensity (remove ghost cells and undo
@@ -594,7 +596,7 @@ class InvertPIC:
         else:
             # Weight particle displacements from initial position z0 to the grid 
             # to determine F then remove ghost cells
-            self.F = _weight_1d(self.x0, self.wf*(self.x-self.x0), self.Nx)
+            self.F = _weight_1d(self.x0, self.wf*(self.x-self.x0), self.Nx)/self.n0
             self.F = self.F[1:-1]
             
             # Find reconstructed measured proton intensity (remove ghost cells and undo

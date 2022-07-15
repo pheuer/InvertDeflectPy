@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 from invertdeflectpy import root_dir
 from invertdeflectpy.pic import InvertPIC
 
-
+# TODO: Add a test with a non-uniform I0
 
 
 def test_1d():
@@ -44,7 +44,7 @@ def test_1d():
     
 def test_2d():
 
-    plots=False
+    plots=True
     
     file = os.path.join(root_dir, 'examples',
                         'gaussian_charge_blob_mu_0p5_veryhighres_lowres.h5')
