@@ -9,7 +9,8 @@ https://github.com/flash-center/PROBLEM
 
 If you use this code, please cite the following papers 
 
-*TBA* J.R. Davies, P.V. Heuer, A.F.A. Bott
+J.R. Davies, P.V. Heuer, A.F.A. Bott Quantitative proton radiography and shadowgraphy for arbitrary intensities.
+High Energy Density Physics 49, (2023) https://doi.org/10.1016/j.hedp.2023.101067
 
 A.F.A. Bott et al. Proton imaging of stochastic magnetic fields. Journal of
 Plasma Physics 83, (2017) https://doi.org/10.1017/S0022377817000939
