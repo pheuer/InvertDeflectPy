@@ -6,7 +6,8 @@ This solver is translated from a matlab program by Jonathan Davies
 
 If you use this code, please cite the following paper
 
-*TBA* J.R. Davies, P.V. Heuer, A.F.A. Bott
+J.R. Davies, P.V. Heuer, A.F.A. Bott Quantitative proton radiography and shadowgraphy for arbitrary intensities.
+High Energy Density Physics 49, (2023) https://doi.org/10.1016/j.hedp.2023.101067
 """
 
 import numpy as np
